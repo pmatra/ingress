@@ -4,9 +4,9 @@ metadata:
   name: http-ingress
 spec:
   rules:
-  - http:
+  - http:10.152.183.28
       paths:
       - path: /
         backend:
-          serviceName: foundryvtt
+          serviceName: foundryvtt-service
           servicePort: 80
