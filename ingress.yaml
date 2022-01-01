@@ -1,12 +1,16 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: http-ingress
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - http:10.152.183.28
-      paths:
-      - path: /
-        backend:
-          serviceName: foundryvtt-service
-          servicePort: 80
+    # - host: nginx.ioo
+    - http: 10.152.183.28
+        paths:
+          - path: /
+            backend:
+              serviceName: foundryvtt-service
+              servicePort: 80
