@@ -9,4 +9,4 @@ spec:
       - path: /
         backend:
           serviceName: foundryvtt
-          servicePort: 3000
+          servicePort: 80
