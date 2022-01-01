@@ -1,3 +1,5 @@
+# ingress-service.yaml
+
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -7,8 +9,8 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    # - host: nginx.ioo
-    - http: 10.152.183.28
+    - host: nginx.ioo
+    - http:
         paths:
           - path: /
             backend:
