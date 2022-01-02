@@ -11,4 +11,4 @@ spec:
         - path: /
           backend:
             serviceName: foundry-service
-            servicePort: 32709
+            servicePort: 3000
