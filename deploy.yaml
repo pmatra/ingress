@@ -1,0 +1,12 @@
+ apiVersion: v1
+ kind: Pod
+ metadata:
+   name: foundryvttver9
+   labels:
+     app: foundryvtt
+ spec:
+   containers:
+     - name: foundryvttver9
+       image: docker.io/petermatra/foundryvttver9:latest
+       ports:
+         - containerPort: 3000
